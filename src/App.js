@@ -1,3 +1,5 @@
+
+//TypeWriter Effect in React js . . . . its not hard to done. .
 import "./styles.css";
 import react from 'react';
 import Typewriter from 'typewriter-effect';
