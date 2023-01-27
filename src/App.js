@@ -65,3 +65,57 @@ export default function App() {
   );
 }
 
+/3. Notification . . .. .toast
+
+import "./styles.css";
+import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import Form from 'react-bootstrap/Form';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useState } from "react";
+export default function App() {
+  const[email,SetEmail]=useState("");
+  const UpdateEmailValue = (e) => {
+    SetEmail(e.target.value);
+  };
+  const notify = () =>{
+    if(email=="" || !email.includes("@")){
+      toast.error('Opps please enter your Email',{
+        autoClose:2000,
+        theme:"colored"
+      });
+      return;
+    }
+    toast.success("message sent successfully!",{
+      position:"top-center",
+      pauseOnFocusLoss:true,
+      draggable:true,
+      autoClose:2000,
+      hideProgressBar:false,
+   progress:undefined,
+   theme:"colored"
+    });
+  }
+  
+
+
+  return (
+    <div>
+      <div class="p-4">
+       <FloatingLabel
+        controlId="floatingInput"
+        label="Email"
+        className="mb-3"
+      >
+        <Form.Control type="email" placeholder="name@example.com" value={email} onChange={UpdateEmailValue}/>
+      </FloatingLabel>
+      <div class="text-center">
+      <button onClick={notify} class="btn btn-success  my-4">submit</button>
+
+      </div>
+      <ToastContainer />
+    </div></div>
+  );
+}
+
+
