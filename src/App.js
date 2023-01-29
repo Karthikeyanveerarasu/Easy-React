@@ -118,4 +118,21 @@ export default function App() {
   );
 }
 
+.............react scroll progress-bar
 
+import React from "react";
+import ProgressBar from "react-scroll-progress-bar"; //Add this line
+
+ export default function App(){
+        return (
+            <div>
+              <div style={{height:"10px"}}>
+  <ProgressBar />
+  </div>              
+                  view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view working This is all you need to get the default view workingv
+           <div style={{height:"6000px"}}>
+           </div>
+            </div>
+        );
+    
+}
