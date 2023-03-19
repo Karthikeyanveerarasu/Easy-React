@@ -1,7 +1,7 @@
 const router = require("express").Router();
-const accountSid = "AC9d19612e88d1b706bc4fc28c231bc937";
-const authToken = "b1f35e56b16e31d4193a6235e010dc83";
-const verifySid = "VA29057a754eacf55f1c308690f3642273";
+const accountSid = "";
+const authToken = ";
+const verifySid = "";
 const client = require("twilio")(accountSid, authToken);
 
 router.post("/mobile",(req,res)=>{
