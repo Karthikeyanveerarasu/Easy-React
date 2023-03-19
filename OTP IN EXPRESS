@@ -1,0 +1,33 @@
+const router = require("express").Router();
+const accountSid = "AC9d19612e88d1b706bc4fc28c231bc937";
+const authToken = "b1f35e56b16e31d4193a6235e010dc83";
+const verifySid = "VA29057a754eacf55f1c308690f3642273";
+const client = require("twilio")(accountSid, authToken);
+
+router.post("/mobile",(req,res)=>{
+    const number=req.body.number;
+    console.log(number);
+    client.verify.v2
+  .services(verifySid)
+  .verifications.create({ to:`+91${number}`, channel: "sms" })
+  .then((verification) => console.log(verification.status))
+//     client.verify.v2
+//   .services(verifySid)
+//   .verifications.create({ , channel: "sms" })
+//   .then((verification) => console.log(verification.status))
+})
+router.post("/otp",(req,res)=>{
+    const otp = req.body.otp;
+    const number=req.body.number;
+    console.log(otp);
+    client.verify.v2
+    .services(verifySid)
+    .verificationChecks.create({ to:`+91${number}`, code: otp })
+    .then((verification_check) => console.log(verification_check.status))
+})
+
+module.exports = router
+
+
+
+
